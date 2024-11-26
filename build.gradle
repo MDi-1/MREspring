@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'xmp.example'
+group = 'xmp'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
@@ -18,8 +18,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	runtimeOnly 'mysql:mysql-connector-java'
-
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compileOnly 'org.projectlombok:lombok:1.18.36'
+	annotationProcessor 'org.projectlombok:lombok'
 }
 
 tasks.named('test') {
